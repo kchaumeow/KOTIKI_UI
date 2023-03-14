@@ -1,1 +1,1 @@
-UI components with html representation
+UI components with html representation for KOTIKI
