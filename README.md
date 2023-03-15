@@ -1,1 +1,1 @@
-UI components with html representation for KOTIKI
+UI components on JSX for KOTIKI
