@@ -1,7 +1,7 @@
-const Avatar = (props) =>{
-    <div onClick={props.onClick}>
-        <img src={props.src ?? 'avatar.png'} class='rounded-circle shadow' alt='Avatar' style='height: 60px; width: 60px;'/>
-    </div>
+import styles from './Avatar.module.css';
+
+function Avatar({ onClick, src, size }) {
+  return (<img onClick={onClick} src={src ?? 'avatar.png'} className={`rounded-circle shadow ${styles[size]}`} alt="Avatar" />);
 }
- 
+
 export default Avatar;
