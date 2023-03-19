@@ -1,26 +1,13 @@
 import Avatar from './Avatar/Avatar';
 import Button from './Button';
-// import styles from "./ProfileShapka.module.css";
-export default function ProfileShapka({
-  user = {
-    id: 1,
-    name: 'Stupid Bastard',
-    imageURL: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80',
-    description: 'bla bla bla',
-    email: 'user@mail.ru',
-    role: 'user',
-    followersCount: 10,
-    followingCount: 56,
-    postsCount: 32,
-  },
-  showFollowButton, onClickFollow,
-}) {
+
+export default function ProfileHeader({ user, showFollowButton, onClickFollow }) {
   if (user == null) {
     throw new Error('User is undefined');
   }
   return (
     <div className="container-lg p-2">
-      <div className="row justify-content-md-center row-cols-3">
+      <div className="row justify-content-md-center align-items-center row-cols-3">
         <div className="col-auto">
           <Avatar size="big" src={user.imageURL} />
         </div>
